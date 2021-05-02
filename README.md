@@ -11,7 +11,7 @@ Now , fetch the code from git-hub
 # npm install
 
 Now, lets set up the service with systemctl.
-# vi /etc/systemd/system/todo.service
+# mv /todo/systemd.service /etc/systemd/system/todo.service
 # systemctl daemon-reload
 # systemctl start todo
 # systemctl status todo
