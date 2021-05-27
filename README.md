@@ -15,5 +15,4 @@ Now, lets set up the service with systemctl.
 # systemctl daemon-reload
 # systemctl start todo
 # systemctl status todo
-RELEASE TAG 0.0.2
 ```
