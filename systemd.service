@@ -6,6 +6,6 @@ Environment=REDIS_HOST=DNSREDIS
 ExecStart=/bin/node /root/todoshell/todo/server.js
 SyslogIdentifier=todo
 Restart=on-failure
-
+SyslogIdentifier=todo
 [Install]
 WantedBy=multi-user.target
