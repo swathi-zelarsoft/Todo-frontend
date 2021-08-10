@@ -4,5 +4,6 @@ WORKDIR     /app
 COPY        server.js .
 COPY        package.json .
 RUN         npm install
-COPY        --from=BUILD /app/server.js server.js
+FROM        node:stretch-slim
+COPY        --from=BUILD /app/. .
 CMD         [ "node", "server.js" ]
