@@ -8,4 +8,5 @@ FROM        node:stretch-slim
 RUN         mkdir -p /todo
 COPY        --from=Build /app  /todo
 WORKDIR      /todo
+EXPOSE      8080/tcp
 CMD         [ "node", "server.js" ]
