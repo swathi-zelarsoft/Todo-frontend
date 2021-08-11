@@ -6,5 +6,6 @@ COPY        package*.json ./
 RUN         npm install
 FROM        node:stretch-slim
 RUN         mkdir -p /todo
-COPY        --from Build /app/  /todo/
+COPY        --from=Build /app  /todo
+WORKDIR      /todo
 CMD         [ "node", "server.js" ]
