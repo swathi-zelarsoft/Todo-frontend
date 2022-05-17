@@ -1,0 +1,20 @@
+apiVersion: skaffold/v2beta28
+kind: Config
+metadata:
+  name: todo
+profiles:
+ - name: build
+   activation:
+    - command: dev
+   build:
+     local:
+       push: false
+       useBuildkit: true
+     artifacts:
+     - image: nodetodo
+       context: .
+       docker:
+         dockerfile: ./Dockerfile
+   deploy: 
+      docker:
+        images: [nodetodo]
